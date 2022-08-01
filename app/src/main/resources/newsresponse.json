@@ -1,0 +1,45 @@
+{
+  "status": "ok",
+  "totalResults": 37,
+  "articles": [
+    {
+      "source": {
+        "id": "the-verge",
+        "name": "The Verge"
+      },
+      "author": "Andrew Webster",
+      "title": "Star Wars spinoff Andor has a new trailer and a new premiere date - The Verge",
+      "description": "Disney has released a new trailer for Star Wars spinoff Andor, which will star Diego Luna and premiere on Disney Plus on September 21st.",
+      "url": "https://www.theverge.com/23286948/star-wars-andor-trailer-release-date-disney-plus",
+      "urlToImage": "https://cdn.vox-cdn.com/thumbor/farIEiZUfFW4AMCZC6cmbcftqu8=/69x0:1807x910/fit-in/1200x630/cdn.vox-cdn.com/uploads/chorus_asset/file/23914517/Screen_Shot_2022_08_01_at_9.20.56_AM.png",
+      "publishedAt": "2022-08-01T12:56:32Z",
+      "content": "The Disney Plus series will now start streaming in September"
+    },
+    {
+      "source": {
+        "id": "cnn",
+        "name": "CNN"
+      },
+      "author": "Tamara Hardingham-Gill, CNN",
+      "title": "Passenger fined $1,874 after two undeclared McMuffins found in luggage - CNN",
+      "description": "A traveler entering Australia from Indonesia has received a fine of $1,874 after two egg and sausage McMuffins bought from a McDonald's in Bali and a ham croissant were found in their luggage in violation of strict biosecurity laws.",
+      "url": "https://www.cnn.com/travel/article/passenger-fined-after-undeclared-mcmuffins-found-in-luggage/index.html",
+      "urlToImage": "https://cdn.cnn.com/cnnnext/dam/assets/220801111355-02-mcmuffin-indonesia-australia-super-tease.jpg",
+      "publishedAt": "2022-08-01T12:55:17Z",
+      "content": "(CNN) A passenger traveling from Bali, Indonesia to Australia has found themselves paying a hefty price for a McDonald's breakfast.The unnamed traveler was handed a fine of 2, 664 Australian dollars… [+3393 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "The Athletic"
+      },
+      "author": "Jim Bowden",
+      "title": "MLB trade deadline eve primer: Top storylines, rumblings, best-available players - The Athletic",
+      "description": "Before the expected flurry of activity leading up to Tuesday's trade deadline at 6 p.m. ET, here's a primer with what you need to know.",
+      "url": "https://theathletic.com/3465183/2022/08/01/mlb-trade-deadline-primer/",
+      "urlToImage": "https://cdn.theathletic.com/app/uploads/2022/08/01022217/AP22212751037515-scaled.jpg",
+      "publishedAt": "2022-08-01T12:17:48Z",
+      "content": "Happy MLB trade deadline eve! Only a few major deals have happened, but that’s about to change. As is always the case this time of year, general managers are busy, working the phones and angling for … [+15101 chars]"
+    }
+  ]
+}
