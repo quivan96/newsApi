@@ -9,13 +9,10 @@ import retrofit2.http.Query
 
 class NewsRemoteDataSourceImpl(
     private val newsApiService: NewsApiService,
-    private val country: String,
-    private val page: Int,
-    private val apiKey: String = BuildConfig.API_KEY
 ) : NewsRemoteDataSource {
 
-    override suspend fun getTopHeadlines(): Response<APIResponse> {
-        return newsApiService.getTopHeadlines(country, page, apiKey)
+    override suspend fun getTopHeadlines(country: String, page: Int): Response<APIResponse> {
+        return newsApiService.getTopHeadlines(country, page)
     }
 
 }

@@ -37,6 +37,8 @@ android {
 
 dependencies {
 
+    def lifecylce_version = "2.5.0"
+
     implementation 'androidx.core:core-ktx:1.8.0'
     implementation 'androidx.appcompat:appcompat:1.4.2'
     implementation 'com.google.android.material:material:1.6.1'
@@ -60,5 +62,9 @@ dependencies {
 
     testImplementation "com.google.truth:truth:1.1"
 
+    //view model
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecylce_version"
+    //live data
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecylce_version"
 
 }
