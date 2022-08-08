@@ -8,6 +8,7 @@ import android.widget.AbsListView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.newsapi.data.utils.Resource
@@ -45,7 +46,7 @@ class NewsFragment : Fragment() {
             val hasReachedToEnd = topPosition + visibleItems >= sizeOfCurrentList
             val shouldPaginate = !isLoading && !isLastPage && hasReachedToEnd && isScrolling
 
-            if(shouldPaginate) {
+            if (shouldPaginate) {
                 page++
                 viewModel.getNewsHeadlines(US, page)
                 isScrolling = false
@@ -68,6 +69,16 @@ class NewsFragment : Fragment() {
         viewModel = (activity as MainActivity).viewModel
         newsAdapter = (activity as MainActivity).adapter
 
+        newsAdapter.setOnItemClickListener {
+            val bundle = Bundle().apply {
+                putSerializable("selected_article", it)
+            }
+            findNavController().navigate(
+                R.id.action_newsFragment_to_infoFragment,
+                bundle
+            )
+        }
+
         initRecyclerView()
         viewNewsList()
     }
@@ -75,15 +86,15 @@ class NewsFragment : Fragment() {
     private fun viewNewsList() {
         viewModel.getNewsHeadlines(US, page)
         viewModel.newsHeadlines.observe(viewLifecycleOwner, Observer { response ->
-            when(response) {
+            when (response) {
                 is Resource.Success -> {
                     hideProgressBar()
                     response.data?.let {
                         newsAdapter.differ.submitList(it.articles.toList())
-                        if(it.totalResults%20 == 0) {
-                            it.totalResults/20
+                        if (it.totalResults % 20 == 0) {
+                            it.totalResults / 20
                         } else {
-                            pages = it.totalResults/20 + 1
+                            pages = it.totalResults / 20 + 1
                         }
                         isLastPage = page == pages
 
